@@ -1,0 +1,20 @@
+p{
+    color:blue;
+}
+/* #empform{
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    margin-left: 20px;
+} */
+.modal-body .form-horizontal .col-sm-2,
+.modal-body .form-horizontal .col-sm-10 {
+    width: 100%
+}
+
+.modal-body .form-horizontal .control-label {
+    text-align: left;
+}
+.modal-body .form-horizontal .col-sm-offset-2 {
+    margin-left: 15px;
+}
