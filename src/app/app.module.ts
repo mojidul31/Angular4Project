@@ -1,23 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import{AlertModule } from 'ngx-bootstrap';
 import { EmployeeItemComponent } from './employee-item/employee-item.component';
 import { EmployeeMenuComponent } from './employee-menu/employee-menu.component';
+import { HomeComponent } from './views/home.component';
+import { JavaComponent } from './views/java.component';
+import { AndroidComponent } from './views/android.component';
+import { routes } from './app.route';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeItemComponent,
-    EmployeeMenuComponent
+    EmployeeMenuComponent,
+    HomeComponent,
+    JavaComponent,
+    AndroidComponent
   ],
   imports: [
     BrowserModule,
     FormsModule, // <-- import the FormsModule before binding with [(ngModel)]    
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    HttpModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
