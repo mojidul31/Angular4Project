@@ -11,6 +11,5 @@ styles:['h1{color:green}','span{color:navy}'] */
 export class AppComponent {
   public title = 'Development Bank Limited';
   public firstName = 'Mojidul';
-  public lastName = 'Islam';
-  //public heroImageUrl='D:\QA ALL\Images\1.jpg';
+  public lastName = 'Islam';  
 }

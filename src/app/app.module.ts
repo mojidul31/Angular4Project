@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import {ModalModule} from "ng2-modal";
 
 import { AppComponent } from './app.component';
 import{AlertModule } from 'ngx-bootstrap';
@@ -12,6 +13,7 @@ import { HomeComponent } from './views/home.component';
 import { JavaComponent } from './views/java.component';
 import { AndroidComponent } from './views/android.component';
 import { EntryEmployeeComponent } from './views/entryEmployee.component';
+import { EmpModalComponent } from './views/empModal.component';
 import { routes } from './app.route';
 
 
@@ -23,7 +25,8 @@ import { routes } from './app.route';
     HomeComponent,
     JavaComponent,
     AndroidComponent,
-    EntryEmployeeComponent
+    EntryEmployeeComponent,
+    EmpModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { routes } from './app.route';
     AlertModule.forRoot(),
     HttpModule,
     RouterModule.forRoot(routes),
+    ModalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
