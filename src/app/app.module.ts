@@ -11,6 +11,7 @@ import { EmployeeMenuComponent } from './employee-menu/employee-menu.component';
 import { HomeComponent } from './views/home.component';
 import { JavaComponent } from './views/java.component';
 import { AndroidComponent } from './views/android.component';
+import { EntryEmployeeComponent } from './views/entryEmployee.component';
 import { routes } from './app.route';
 
 
@@ -21,7 +22,8 @@ import { routes } from './app.route';
     EmployeeMenuComponent,
     HomeComponent,
     JavaComponent,
-    AndroidComponent
+    AndroidComponent,
+    EntryEmployeeComponent
   ],
   imports: [
     BrowserModule,
