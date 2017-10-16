@@ -30,12 +30,12 @@ template:`<div style="width:auto;height:auto;margin-left:40px;width:450px">
 </div>
 <div class="form-group">
 <label for="emp.pwd">Password:</label>
-<input type="password" class="form-control" id="pwd" required="required">
+<input type="password" class="form-control" id="emp.pwd" required="required">
 </div>
 <div class="checkbox">
 <label><input type="checkbox"> Remember me</label>
 </div>
-<button type="submit" class="btn btn-primary">Submit</button>
+<button type="submit" (click)="addNewRow()" class="btn btn-primary">Submit</button>
 </form>
 </div>
 <hr/>
@@ -75,5 +75,8 @@ export class EntryEmployeeComponent{
         {"name":"Mojidul","email":"mojidul@mislbd.com","address":"Kurigram","mobile":"015590256095","dateofbirth":"21/01/1981"},
         {"name":"Nayeem","email":"nayeem@google.com","address":"Kurigram","mobile":"01711000001","dateofbirth":"21/01/1981"},
         {"name":"Azad","email":"azad@mislbd.com","address":"Dhaka","mobile":"01559874874","dateofbirth":"21/01/1981"}
-    ];   
+    ];
+    //pubic person[]=[
+
+    //];
 }
