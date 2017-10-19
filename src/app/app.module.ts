@@ -26,7 +26,7 @@ import { routes } from './app.route';
     JavaComponent,
     AndroidComponent,
     EntryEmployeeComponent,
-    EmpModalComponent,
+    EmpModalComponent
   ],
   imports: [
     BrowserModule,

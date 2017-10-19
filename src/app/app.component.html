@@ -80,16 +80,18 @@
         </tr>
     </tbody>
 </table>
-
+<!--
 <h4> Customer Name : </h4><h5> {{customerObj.name}}</h5>
 <h4> Customer Name from List : </h4><h5> {{customerList.name}}</h5>
 <button (click)="getCustomer()">Get Customer Details</button>
+-->
 <input type="text" [(ngModel)]="cusName">
 <select [(ngModel)]="cusName">
   <option *ngFor="let customers of customerList">{{customers.name}}</option>
 </select>
 <button (click)="getCustomer()">Get Customer List</button>
 
+<button (click)="saveCustomer()">Save Customer</button>
 <div class="empform">
     <router-outlet></router-outlet>
 </div>
