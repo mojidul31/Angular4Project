@@ -25,4 +25,14 @@ export class DepartmentComponent implements OnInit {
   this.departmentService.saveCustomer(this.department).subscribe(res=>this.message = res);
   console.log(this.message);
  }
+  onSubmit = function (departmentFormValue) {
+    console.log(departmentFormValue);
+    //let body = JSON.stringify(departmentFormValue);
+    let department1 = new Department(departmentFormValue.deptCode,departmentFormValue.deptName);
+    this.departmentService.saveCustomer(department1).subscribe(res=>this.message = res);
+    location.reload();
+    // var body = "firstname=" + user.firstname + "&lastname=" + user.lastname + "&name=" + user.name;
+    // this.http.post("http://www.testtttt.com", body).subscribe((data) => {});
+
+  }
 }

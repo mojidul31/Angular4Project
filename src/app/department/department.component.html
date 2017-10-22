@@ -29,6 +29,15 @@
       </modal-footer>
   </modal>
   </div>
+  <hr>
+  <form class="container" #departmentForm = "ngForm" (ngSubmit) = "onSubmit(departmentForm.value)">
+    <input type="text" name="deptCode" Placeholder="Department Code" ngModel>
+    <br>
+    <input type="text" name="deptName" Placeholder="Department Name" ngModel>
+    <br>
+    <input type="submit" value="Save">
+    </form>
+    <hr>
   <table border="1">
     <thead>
         <tr>
