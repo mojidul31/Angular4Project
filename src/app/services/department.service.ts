@@ -25,6 +25,14 @@ export class DepartmentService {
             .map(this.extractData)
             .catch(this.handleErrorObservable);
         }
+        public saveDepartment(dept:Department): Observable<number>{        
+            let headers = new Headers({ 'Content-Type': 'application/json' });
+            let options = new RequestOptions({ headers: headers });
+            let _url: string = 'http://localhost:8078/uni-man-sys/departments';
+            return this._http.post(_url, dept, options)
+            .map(this.extractData)
+            .catch(this.handleErrorObservable);
+        }
         private extractData(res: Response) {
             let body = res.json();
                 return body.data || {};

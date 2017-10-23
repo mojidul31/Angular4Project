@@ -1,16 +1,13 @@
-<p>
-  Show Department List!
-</p>
 <div class="row" style="width:auto;height:auto;margin-left:40px;width:450px">
   <button (click)="myModal.open()" style="border-radius: 10px"><h4 style="color:green">Add Department</h4></button>
-  <modal #myModal>
+ <modal #myModal>
       <modal-header>
-      <div style="background-color:#42dcf4">
+       <div id="modal-header"> 
           <h1 >Department Entry</h1>
-      </div>
+       </div>
       </modal-header>
-      <modal-content>
-      <form class="form-vertical" role="form">
+      <modal-content>    
+    <form class="form-vertical" role="form">
       <div class="form-group">
       <label for="dept.deptCode">Department Code :</label>
       <input type="text" class="form-control" id="dept.deptCode" required="required" >
@@ -20,15 +17,41 @@
       <input type="text" class="form-control" id="dept.deptName" required="required">
       </div>      
      </form>
-      </modal-content>
+    </modal-content>
       <modal-footer>
       <div style="background-color:#b8d2d6">
-      <button class="btn btn-primary btn-md" (click)="saveDepartment()">Save</button>
-      <button class="btn btn-danger btn-md" (click)="myModal.close()">close</button>
+      <button class="btn btn-primary btn-md" (click)="saveDepartment()">Save</button> 
+      <button class="btn btn-danger btn-md" (click)="myModal.close()">close</button>     
       </div>
       </modal-footer>
   </modal>
   </div>
+  <!-- <div id="department"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#department-modal">Add Department</button></div>
+  <div id="department-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+  <a class="close" data-dismiss="modal">×</a>
+  <h3>Entry Department</h3>
+  </div>
+  <div class="modal-body">
+  <form class="department" name="department">
+  <strong>Department Code</strong>
+  <br />
+  <input type="text" name="deptCode" class="input-xlarge">
+  <br /><br /><strong>Department Name</strong><br />
+  <br />
+  <input type="text" name="deptName" class="input-xlarge">
+  </form>
+  </div>
+  <div class="modal-footer">
+  <button class="btn btn-success" id="submit">Save</button>
+  <a href="#" class="btn" data-dismiss="modal">Close</a>
+  </div>
+  </div>
+  </div>
+  </div> -->
+  <!--
   <hr>
   <form class="container" #departmentForm = "ngForm" (ngSubmit) = "onSubmit(departmentForm.value)">
     <input type="text" name="deptCode" Placeholder="Department Code" ngModel>
@@ -38,19 +61,25 @@
     <input type="submit" value="Save">
     </form>
     <hr>
-  <table border="1">
+-->
+<p>
+    Show Department List!
+</p>
+  <table class="table table-bordered table-striped">
     <thead>
-        <tr>
+        <tr style="background-color:aquamarine">
             <th>Serial No</th>
             <th>Department Code</th>
-            <th>Department Name </th>
+            <th>Department Name</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let departments of departmentList; let i = index">
             <td>{{i+1}}</td>
             <td>{{departments.deptCode}}</td>
-            <td>{{departments.deptName}}</td>     
+            <td>{{departments.deptName}}</td>
+            <td><button class='btn btn-info btn-sm' (click)="editDepartment()">Edit</button> | <button class='btn btn-danger btn-sm' (click)="deleteDepartment()">Delete</button></td>                 
         </tr>
     </tbody>
 </table>

@@ -14,6 +14,7 @@ export class DepartmentComponent implements OnInit {
   errorMessage: String;
   department = new Department('Ksc3','KSC');
   public message: string = 'Save Successfully!';
+  public msg: number;
   public departmentList: any; 
   constructor(private departmentService: DepartmentService) { }
 
@@ -29,8 +30,10 @@ export class DepartmentComponent implements OnInit {
     console.log(departmentFormValue);
     //let body = JSON.stringify(departmentFormValue);
     let department1 = new Department(departmentFormValue.deptCode,departmentFormValue.deptName);
-    this.departmentService.saveCustomer(department1).subscribe(res=>this.message = res);
-    location.reload();
+    //this.departmentService.saveCustomer(department1).subscribe(res=>this.message = res);
+    this.departmentService.saveDepartment(department1).subscribe(res=>this.msg = res);
+    console.log(this.msg);
+    //location.reload();
     // var body = "firstname=" + user.firstname + "&lastname=" + user.lastname + "&name=" + user.name;
     // this.http.post("http://www.testtttt.com", body).subscribe((data) => {});
 

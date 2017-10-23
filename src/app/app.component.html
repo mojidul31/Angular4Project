@@ -62,14 +62,15 @@
 <input type="text" [(ngModel)]="empId">
 <button (click)="getEmployeeDetails()">Get Employee Details</button> -->
 
-<table border="1">
+<table class="table table-bordered table-striped">
     <thead>
-        <tr>
+        <tr style="background-color:aquamarine">
             <th>Serial No</th>
             <th>Name</th>
             <th>Father Name </th>
             <th>Mother Name </th>
             <th>Phone </th>
+            <th>Action </th>
         </tr>
     </thead>
     <tbody>
@@ -78,7 +79,8 @@
             <td>{{customers.name}}</td>
             <td>{{customers.fathername}}</td>
             <td>{{customers.mothername}}</td>
-            <td>{{customers.phone}}</td>            
+            <td>{{customers.phone}}</td>
+            <td><button class='btn btn-info btn-sm' (click)="editCustomer()">Edit</button> | <button class='btn btn-danger btn-sm' (click)="deleteCustomer()">Delete</button></td>            
         </tr>
     </tbody>
 </table>
