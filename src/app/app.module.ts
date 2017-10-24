@@ -16,6 +16,7 @@ import { EntryEmployeeComponent } from './views/entryEmployee.component';
 import { EmpModalComponent } from './views/empModal.component';
 import { routes } from './app.route';
 import { DepartmentComponent } from './department/department.component';
+import { CustomerComponent } from './customer/customer.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { DepartmentComponent } from './department/department.component';
     AndroidComponent,
     EntryEmployeeComponent,
     EmpModalComponent,
-    DepartmentComponent
+    DepartmentComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,74 @@
+<div class="row" style="width:auto;height:auto;margin-left:40px;width:450px">
+    <div class="clearfix"></div>
+    <!-- <button type="button" class="btn btn-primary btn-md pull-right"    (click)="myModal.open()" style="border-radius: 10px"><h4 style="color:green">Add Department</h4></button> -->
+        <button type="button" class="btn btn-success btn-md pull-right" (click)="myModal.open()">Add Customer</button>        
+
+<modal #myModal>
+  <modal-header>
+   <div id="modal-header"> 
+      <h1 >Customer Entry</h1>
+   </div>
+  </modal-header>
+  <modal-content>    
+<form class="form-vertical" role="form">
+  <div class="form-group">
+  <label for="cus.name">Customer Name :</label>
+  <input type="text" class="form-control" id="cus.name" required="required" >
+  </div>
+  <div class="form-group">
+  <label for="cus.fname">Father Name :</label>
+  <input type="text" class="form-control" id="cus.fname" required="required">
+  </div>
+  <div class="form-group">
+      <label for="cus.mname">Mother Name :</label>
+      <input type="text" class="form-control" id="cus.mname" required="required">
+      </div>  
+      <div class="form-group">
+          <label for="cus.phone">Phone No :</label>
+          <input type="text" class="form-control" id="cus.phone" required="required">
+          </div>        
+ </form>
+</modal-content>
+  <modal-footer>
+  <div style="background-color:#b8d2d6">
+  <button class="btn btn-primary btn-md" (click)="saveCustomer()">Save</button> 
+  <button class="btn btn-danger btn-md" (click)="myModal.close()">close</button>     
+  </div>
+  </modal-footer>
+</modal>
+</div>
+<h2 style="color:black;font-weight:bold">Customer List</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr style="background-color:aquamarine">
+            <th>Serial No</th>
+            <th>Name</th>
+            <th>Father Name </th>
+            <th>Mother Name </th>
+            <th>Phone </th>
+            <th>Action </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customers of customerList; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{customers.name}}</td>
+            <td>{{customers.fathername}}</td>
+            <td>{{customers.mothername}}</td>
+            <td>{{customers.phone}}</td>
+            <td><button class='btn btn-info btn-sm' (click)="editCustomer()">Edit</button> | <button class='btn btn-danger btn-sm' (click)="deleteCustomer()">Delete</button></td>            
+        </tr>
+    </tbody>
+</table>
+<!--
+<h4> Customer Name : </h4><h5> {{customerObj.name}}</h5>
+<h4> Customer Name from List : </h4><h5> {{customerList.name}}</h5>
+<button (click)="getCustomer()">Get Customer Details</button>
+-->
+<!-- <input type="text" [(ngModel)]="cusName"> -->
+<select [(ngModel)]="cusName">
+  <option *ngFor="let customers of customerList">{{customers.name}}</option>
+</select>
+<button (click)="getCustomer()">Get Customer List</button>
+
+<button (click)="saveCustomer()">Save Customer</button>

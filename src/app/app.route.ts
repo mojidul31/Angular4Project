@@ -5,6 +5,7 @@ import { AndroidComponent } from './views/android.component';
 import { EntryEmployeeComponent } from './views/entryEmployee.component';
 import { EmpModalComponent } from './views/empModal.component';
 import { DepartmentComponent } from './department/department.component';
+import { CustomerComponent } from './customer/customer.component';
 
 export const routes:Routes=[
 {path:'',component:HomeComponent},
@@ -12,5 +13,6 @@ export const routes:Routes=[
 {path:'android',component:AndroidComponent},
 {path:'employee',component:EntryEmployeeComponent},
 {path:'empmodal',component:EmpModalComponent},
-{path:'department',component:DepartmentComponent}
+{path:'department',component:DepartmentComponent},
+{path:'customer',component:CustomerComponent}
 ]

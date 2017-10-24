@@ -1,5 +1,8 @@
 <div class="row" style="width:auto;height:auto;margin-left:40px;width:450px">
-  <button (click)="myModal.open()" style="border-radius: 10px"><h4 style="color:green">Add Department</h4></button>
+        <div class="clearfix"></div>
+        <!-- <button type="button" class="btn btn-primary btn-md pull-right"    (click)="myModal.open()" style="border-radius: 10px"><h4 style="color:green">Add Department</h4></button> -->
+            <button type="button" class="btn btn-success btn-md pull-right" (click)="myModal.open()">Add Department</button>        
+    
  <modal #myModal>
       <modal-header>
        <div id="modal-header"> 
@@ -62,8 +65,8 @@
     </form>
     <hr>
 -->
-<p>
-    Show Department List!
+<p style="color:black;font-weight:bold;font-size:12pt">
+    Show Department List
 </p>
   <table class="table table-bordered table-striped">
     <thead>
