@@ -12,7 +12,7 @@ export class DepartmentService {
     constructor(private _http: Http) {}
     
         public getDepartments(){
-            let _url: string = 'http://172.16.215.57:8078/uni-man-sys/departments';
+            let _url: string = 'http://172.16.215.44:8078/uni-man-sys/departments';
             //alert("test");
             return this._http.get(_url);
         }
@@ -20,7 +20,7 @@ export class DepartmentService {
         public saveCustomer(dept:Department): Observable<string>{        
             let headers = new Headers({ 'Content-Type': 'application/json' });
             let options = new RequestOptions({ headers: headers });
-            let _url: string = 'http://localhost:8078/uni-man-sys/departments';
+            let _url: string = 'http://172.16.215.44:8078/uni-man-sys/departments';
             return this._http.post(_url, dept, options)
             .map(this.extractData)
             .catch(this.handleErrorObservable);
@@ -28,7 +28,7 @@ export class DepartmentService {
         public saveDepartment(dept:Department): Observable<number>{        
             let headers = new Headers({ 'Content-Type': 'application/json' });
             let options = new RequestOptions({ headers: headers });
-            let _url: string = 'http://localhost:8078/uni-man-sys/departments';
+            let _url: string = 'http://172.16.215.44:8078/uni-man-sys/departments';
             return this._http.post(_url, dept, options)
             .map(this.extractData)
             .catch(this.handleErrorObservable);

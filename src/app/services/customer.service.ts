@@ -12,7 +12,7 @@ export class CustomerService {
     constructor(private _http: Http) {}
     
         public getCustomers(){
-            let _url: string = 'http://172.16.215.57:8078/uni-man-sys/customers';
+            let _url: string = 'http://172.16.215.44:8078/uni-man-sys/customers';
             //alert("test");
             return this._http.get(_url);
         }
@@ -20,7 +20,7 @@ export class CustomerService {
         public saveCustomer(cust:Customer): Observable<string>{        
             let headers = new Headers({ 'Content-Type': 'application/json' });
             let options = new RequestOptions({ headers: headers });
-            let _url: string = 'http://localhost:8078/uni-man-sys/departments';
+            let _url: string = 'http://172.16.215.44:8078/uni-man-sys/departments';
             return this._http.post(_url, cust, options)
             .map(this.extractData)
             .catch(this.handleErrorObservable);
@@ -28,7 +28,7 @@ export class CustomerService {
         public saveDepartment(cust:Customer): Observable<number>{        
             let headers = new Headers({ 'Content-Type': 'application/json' });
             let options = new RequestOptions({ headers: headers });
-            let _url: string = 'http://localhost:8078/uni-man-sys/departments';
+            let _url: string = 'http://172.16.215.44:8078/uni-man-sys/departments';
             return this._http.post(_url, cust, options)
             .map(this.extractData)
             .catch(this.handleErrorObservable);

@@ -18,7 +18,7 @@ export class HttpPostService{
     // public saveCustomer(){
     //     let headers = new Headers({ 'Content-Type': 'application/json' });
     //     let options = new RequestOptions({ headers: headers });
-    //     let _url: string = 'http://localhost:8078/uni-man-sys/departments';
+    //     let _url: string = 'http://172.16.215.44:8078/uni-man-sys/departments';
     //     //this.loading = true;
     //     return this._http.post(_url,JSON.stringify({deptCode:'cse01',deptName:'CSE'})).subscribe(res => {
     //         console.log(res);
